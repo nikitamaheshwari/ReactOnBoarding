@@ -1,0 +1,22 @@
+.cardRadio {
+    min-width: 150px;
+    max-width: 150px;
+    border:1px solid #664DE5;
+    padding:20px;
+    border-radius:4px;
+    img {
+        width: 20px;
+    }
+    p {
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .workspace-type {
+        font-weight: 800;
+    }
+}
+.workspace-selector {
+    display: flex;
+    justify-content: center;
+}

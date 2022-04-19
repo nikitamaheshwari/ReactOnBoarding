@@ -1,0 +1,30 @@
+.RSPBprogressBar {
+    height:1px;
+    margin:70px 70px 0;
+    .RSPBprogression {
+         background-color: #664DE5;
+
+     }
+}
+
+
+.card {
+    min-height: 90vh;
+    border:none;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 900;
+        margin-top: 25%;
+        color: #151B28;
+        img {
+            width: 25px;
+            margin-right: 10px;
+        }
+    }
+
+    
+}

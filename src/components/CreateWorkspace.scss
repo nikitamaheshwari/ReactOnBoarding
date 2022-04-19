@@ -1,0 +1,15 @@
+.workspace-url {
+    width:130px;
+    display: inline;  
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;  
+    background-color: #F8F9FC;
+    border-right: none;
+    pointer-events: none;
+}
+.workspace-url-value   {
+    display: inline;
+    width: calc(100% - 130px);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

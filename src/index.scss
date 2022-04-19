@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: 'Inter', sans-serif;
+
+}
+
+label {
+  color: #475268;
+  font-weight: 600;
+  font-size: 12px;
+}
+.form-control {
+  color:#CCD1DD;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.5;
+  padding: 0.7rem 0.8rem;
+  &:focus {
+    border-color: #664DE5;
+    box-shadow: none;
+  }
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.w-100 {
+  width: 100%;
+}
+.btn {
+  font-weight: 600;
+  line-height: 2;
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btn-primary {
+  background-color: #664DE5;
+  color:#d3cdf1 ;
+  font-size: 12px;
+  &:hover, &:focus {
+    background-color: #664DE5;
+    color:#d3cdf1 ;
+  }
+
+}
+.btn-secondary {
+  background-color: transparent;
+  color:#000 ;
+  font-size: 12px;
+  border:1px solid #664DE5;
+  margin-top: 15px;
+  &:hover, &:focus {
+    background-color: #664DE5;
+    color:#d3cdf1 ;
+  }
+
+}
+.welcome-sec {
+  .title {
+      font-size: 28px;
+      color: #151B28;
+  }
+  .note {
+      color:#737E95;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 40px;
+  }
+}
