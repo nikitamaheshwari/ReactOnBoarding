@@ -119,7 +119,7 @@ class MasterForm extends Component {
 
     // If the current step is the last step, then render the "submit" button
     if (currentStep > 3) {
-      return <Button color="primary w-100">Submit</Button>;
+      return <Button color="primary w-100">Lauch Eden</Button>;
     }
     // ...else render nothing
     return null;

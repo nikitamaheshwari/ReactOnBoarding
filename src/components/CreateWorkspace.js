@@ -12,7 +12,7 @@ export class CreateWorkspace extends Component {
         return null;
       }
     return (
-       <div className="create-wspace-sec">
+       <div className="section">
           <h1 className='title'>Lets set up a home for for all your work</h1>
           <p className='note text-center'>you can always create workspace later</p>
           <FormGroup>

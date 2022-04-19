@@ -14,7 +14,7 @@ export class SetupWorkspace extends Component {
         return null;
       }
     return (
-        <div className="create-wspace-sec">
+        <div className="section">
         <h1 className='title'>How are you planning to use Eden?</h1>
         <p className='note text-center'>we will streamline you setup experience accordingly.</p>
         <FormGroup tag="fieldset" className='workspace-selector'>

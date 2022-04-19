@@ -9,7 +9,7 @@ export class Welcome extends Component {
         return null;
       }
     return (
-      <div className="welcome-sec">
+      <div className="section">
           <h1 className='title'>Welcome! First things first...</h1>
           <p className='note text-center'>you can always change them later.</p>
           <FormGroup>
