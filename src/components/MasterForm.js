@@ -59,7 +59,7 @@ class MasterForm extends Component {
         alert('Please enter the Full Name and Workspace Name to onboard!!');
         return;
     }
-    alert(`Your registration detail: \n 
+    alert(`Your OnBoarding detail: \n 
       FullName: ${fullname} \n 
       NickName: ${nickname} \n
       workspaceURl: ${workspaceurl} \n
@@ -73,10 +73,30 @@ class MasterForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 3 ? 4 : currentStep + 1;
-    this.setState({
-      currentStep: currentStep
-    });
+    if(currentStep === 3 && this.state.fullname === '' && this.state.workspacename === '') {
+        this.setState({
+            currentStep: 1
+          });
+        return (
+            alert('Please enter the Full Name to onboard!!')
+        );
+    }
+    else if (currentStep === 3 &&  this.state.workspacename === '') {
+        this.setState({
+            currentStep: 2
+          });
+        return (
+            alert('Please enter Workspace Name to onboard!!')
+        );
+    }
+    else {
+
+        currentStep = currentStep >= 3 ? 4 : currentStep + 1;
+        this.setState({
+          currentStep: currentStep
+        });
+    }
+
   }
 
   _prev() {
@@ -107,7 +127,7 @@ class MasterForm extends Component {
 
   get nextButton() {
     let currentStep = this.state.currentStep;
-    // If the current step is not 3, then render the "next" button
+    // If the current step is not 4, then render the "next" button
     
     if (currentStep < 4) {
       return (
@@ -173,7 +193,7 @@ class MasterForm extends Component {
                 handleChange={this.handleChange}
                 // workspacename={this.state.workspacename}
                 // workspaceurl={this.state.workspaceurl}
-                // fullname={this.state.fullname}
+                fullname={this.state.fullname}
                 // nickname={this.state.nickname}
               />
             <div className="footer-buttons">

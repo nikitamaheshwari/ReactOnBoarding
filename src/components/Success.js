@@ -12,7 +12,7 @@ export class Success extends Component {
             <img src={ congo } alt='congo' className='img-fluid congo-img'></img>
         </div>
         <h1 className='title'>
-        Congratulations, Eren!</h1>
+        Congratulations, {this.props.fullname}</h1>
         <p className='note text-center'>You have completed onboarding , you can start using Eden</p>
         
     </div>
