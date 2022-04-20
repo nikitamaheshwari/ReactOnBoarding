@@ -5,10 +5,6 @@ import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 
 export class Multistep extends Component {
-    // constructor(props) {
-    //     super(props);
-    // //  MultiStepProgressBar = props => {
-    // }
     render() {
       var stepPercentage = 0;
          

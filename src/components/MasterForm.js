@@ -19,6 +19,7 @@ import Success from "./Success";
 import "./MasterForm.scss";
 import logo from '../images/logo.png';
 import Welcome from "./Welcome";
+import Alert from "reactstrap/lib/Alert";
 
 class MasterForm extends Component {
   constructor(props) {
@@ -45,7 +46,6 @@ class MasterForm extends Component {
   // Use the submitted data to set the state
   handleChange(event) {
       const { name, value } = event.target;
-      console.log(name,event.target.value)
     this.setState({
       [name]: value
     });
@@ -55,7 +55,10 @@ class MasterForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { fullname, nickname, workspacename, workspaceurl, workspacetype } = this.state;
-    console.log(workspacetype);
+    if(fullname === '' || workspacename === '') {
+        alert('Please enter the Full Name and Workspace Name to onboard!!');
+        return;
+    }
     alert(`Your registration detail: \n 
       FullName: ${fullname} \n 
       NickName: ${nickname} \n
@@ -122,7 +125,7 @@ class MasterForm extends Component {
 
     // If the current step is the last step, then render the "submit" button
     if (currentStep > 3) {
-      return <Button color="primary w-100">Lauch Eden</Button>;
+      return <Button color="primary w-100">Launch Eden</Button>;
     }
     // ...else render nothing
     return null;

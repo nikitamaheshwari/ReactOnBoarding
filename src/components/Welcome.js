@@ -13,7 +13,7 @@ export class Welcome extends Component {
           <h1 className='title'>Welcome! First things first...</h1>
           <p className='note text-center'>you can always change them later.</p>
           <FormGroup>
-            <Label for="fullname">Full Name</Label>
+            <Label for="fullname">Full Name <span className="text-danger">*</span></Label>
             <Input
             type="text"
             name="fullname"

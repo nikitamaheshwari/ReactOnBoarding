@@ -5,10 +5,6 @@ import users from '../images/users.svg'
 import './SetupWorkspace.scss'
 
 export class SetupWorkspace extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-
 
     render() {
         if (this.props.currentStep !== 3) {

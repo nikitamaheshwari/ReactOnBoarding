@@ -3,9 +3,7 @@ import { FormGroup, Label, Input } from "reactstrap";
 import './CreateWorkspace.scss'
 
 export class CreateWorkspace extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+ 
 
   render() {
     if (this.props.currentStep !== 2) {
@@ -16,7 +14,7 @@ export class CreateWorkspace extends Component {
           <h1 className='title'>Let's set up a home for all your work</h1>
           <p className='note text-center'>you can always create workspace later</p>
           <FormGroup>
-            <Label for="worspacename">Workspace Name</Label>
+            <Label for="worspacename">Workspace Name<span className="text-danger">*</span></Label>
             <Input
             type="text"
             name="workspacename"
