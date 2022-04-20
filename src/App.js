@@ -19,7 +19,7 @@ const App = () => {
         <Row>
           <Col xs="12" sm="12" md="12">       
             <Row>
-              <Col xs="12" sm="12" md="12" lg={{offset : 4 , size: 5}} className="justify-content-center">
+              <Col xs="12" sm="12" md="12" lg={{offset : 3 , size: 6}} className="justify-content-center">
                 <MasterForm />
               </Col>
             </Row>
