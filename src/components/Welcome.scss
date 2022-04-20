@@ -1,12 +1,30 @@
 .section {
+    padding:0 4rem;
     .title {
-        font-size: 28px;
+        font-size: 26px;
         color: #151B28;
+        margin-top: 30px;
+        margin-right : -4rem ;
+        margin-left: -4rem;
+        @media screen and (max-width:480px) {
+            font-size: 15px;
+            margin-bottom: 5px;
+            margin-left:0;
+            margin-right: 0;
+        }
     }
     .note {
         color:#737E95;
         font-size: 13px;
         font-weight: 500;
         margin-bottom: 40px;
+        @media screen and (max-width:480px) {
+            margin-bottom: 20px;
+            line-height: 18px;
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        padding:0 ;
     }
 }

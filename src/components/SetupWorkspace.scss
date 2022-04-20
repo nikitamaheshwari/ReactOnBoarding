@@ -1,22 +1,43 @@
 .cardRadio {
     min-width: 150px;
     max-width: 150px;
-    border:1px solid #664DE5;
+    border:1px solid #dddaed;
     padding:20px;
     border-radius:4px;
     img {
         width: 20px;
     }
     p {
+        color:#94999f;
         &:last-child{
             margin-bottom: 0;
         }
     }
     .workspace-type {
         font-weight: 800;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555962;
+    }
+    @media screen and (max-width:480px) {
+        height: 163px;
     }
 }
 .workspace-selector {
     display: flex;
     justify-content: center;
 }
+.form-check-input {
+    display: none;
+}
+.form-check-input:checked + .cardRadio {
+    border:1px solid #664DE5;
+        img {
+            fill:red
+        }
+}
+    .form-check:first-child {
+        padding-left: 0;
+    }
+

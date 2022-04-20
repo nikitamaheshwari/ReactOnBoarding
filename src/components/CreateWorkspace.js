@@ -13,7 +13,7 @@ export class CreateWorkspace extends Component {
       }
     return (
        <div className="section">
-          <h1 className='title'>Lets set up a home for for all your work</h1>
+          <h1 className='title'>Let's set up a home for all your work</h1>
           <p className='note text-center'>you can always create workspace later</p>
           <FormGroup>
             <Label for="worspacename">Workspace Name</Label>
@@ -33,6 +33,7 @@ export class CreateWorkspace extends Component {
                 type="text"
                 placeholder="www.eden.com/"
                 className="workspace-url"
+                disabled
                 />
                 <Input
                 type="text"

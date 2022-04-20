@@ -30,10 +30,10 @@ class MasterForm extends Component {
       fullname: "",
       nickname: "",
       workspaceurl: "",
-      workspacename:""
+      workspacename:"",
+      workspacetype:"self",
 
     };
-
     // Bind the submission to handleChange()
     this.handleChange = this.handleChange.bind(this);
 
@@ -44,7 +44,8 @@ class MasterForm extends Component {
 
   // Use the submitted data to set the state
   handleChange(event) {
-    const { name, value } = event.target;
+      const { name, value } = event.target;
+      console.log(name,event.target.value)
     this.setState({
       [name]: value
     });
@@ -53,12 +54,14 @@ class MasterForm extends Component {
   // Trigger an alert on form submission
   handleSubmit = event => {
     event.preventDefault();
-    const { fullname, nickname, workspacename, workspaceurl } = this.state;
+    const { fullname, nickname, workspacename, workspaceurl, workspacetype } = this.state;
+    console.log(workspacetype);
     alert(`Your registration detail: \n 
       FullName: ${fullname} \n 
       NickName: ${nickname} \n
       workspaceURl: ${workspaceurl} \n
-      workspaceName: ${workspacename}`);
+      workspaceName: ${workspacename} \n
+      WorkspaceType: ${workspacetype}`);
   };
 
   // Test current step with ternary
@@ -155,22 +158,27 @@ class MasterForm extends Component {
               <SetupWorkspace
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
-                workspacename={this.state.workspacename}
-                workspaceurl={this.state.workspaceurl}
+                selectedvalue={this.state.selectedvalue}
+                // workspacename={this.state.workspacename}
+                // workspaceurl={this.state.workspaceurl}
+                workspacetype = {this.state.workspacetype}
                 // fullname={this.state.fullname}
                 // nickname={this.state.nickname}
               />
              <Success
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
-                workspacename={this.state.workspacename}
-                workspaceurl={this.state.workspaceurl}
+                // workspacename={this.state.workspacename}
+                // workspaceurl={this.state.workspaceurl}
                 // fullname={this.state.fullname}
                 // nickname={this.state.nickname}
               />
+            <div className="footer-buttons">
               {this.nextButton}
               {this.submitButton}
               {this.previousButton}
+            </div>
+              
             </CardBody>
             {/* <CardFooter> */}
             {/* </CardFooter> */}

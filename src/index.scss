@@ -18,15 +18,20 @@ label {
   font-size: 12px;
 }
 .form-control {
-  color:#CCD1DD;
+  color:#afb3b9;
   font-size: 12px;
   font-weight: 600;
-  opacity: 0.5;
+  // opacity: 0.5;
   padding: 0.7rem 0.8rem;
   &:focus {
     border-color: #664DE5;
     box-shadow: none;
+  color:#afb3b9;
+ 
   }
+  & input {
+      color:#afb3b9;
+}
 }
 .form-group {
   margin-bottom: 15px;
@@ -57,9 +62,15 @@ label {
   font-size: 12px;
   border:1px solid #664DE5;
   margin-top: 15px;
-  &:hover, &:focus {
+  &:hover {
     background-color: #664DE5;
     color:#d3cdf1 ;
+  }
+   &:focus {
+    background-color: transparent;
+    color:#000 ;
+    border:1px solid #664DE5;
+
   }
 
 }

@@ -1,6 +1,9 @@
 .App {
   // margin-top: 1%;
-  margin:20px;  
+  margin:20px; 
+  @media screen and (max-width:480px) {
+    margin:0;
+  } 
 }
 .stepsWrapper{
   width: 60%;
