@@ -156,12 +156,17 @@ class MasterForm extends Component {
       <>
         <Form onSubmit={this.handleSubmit}>
           <Card>
-            {/* <CardHeader>Create an Account</CardHeader> */}
             <CardBody>
-                
                 <h1><img src={logo} alt="logo" className="img-fluid"></img>Eden</h1>
               <CardTitle>
-                <Multistep currentStep={this.state.currentStep} />
+                <Multistep 
+                    currentStep={this.state.currentStep} 
+                    fullname= {this.state.fullname}
+                    nickname = {this.state.nickname}
+                    workspacename = {this.state.workspacename}
+                    workspacetype = {this.state.workspacetype}
+                    workspaceurl = {this.state.workspaceurl}
+                    />
               </CardTitle>
               <CardText />
               <Welcome 
@@ -175,26 +180,17 @@ class MasterForm extends Component {
                 handleChange={this.handleChange}
                 workspacename={this.state.workspacename}
                 workspaceurl={this.state.workspaceurl}
-                // fullname={this.state.fullname}
-                // nickname={this.state.nickname}
               />
               <SetupWorkspace
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
                 selectedvalue={this.state.selectedvalue}
-                // workspacename={this.state.workspacename}
-                // workspaceurl={this.state.workspaceurl}
                 workspacetype = {this.state.workspacetype}
-                // fullname={this.state.fullname}
-                // nickname={this.state.nickname}
               />
              <Success
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
-                // workspacename={this.state.workspacename}
-                // workspaceurl={this.state.workspaceurl}
                 fullname={this.state.fullname}
-                // nickname={this.state.nickname}
               />
             <div className="footer-buttons">
               {this.nextButton}
@@ -203,8 +199,6 @@ class MasterForm extends Component {
             </div>
               
             </CardBody>
-            {/* <CardFooter> */}
-            {/* </CardFooter> */}
           </Card>
         </Form>
       </>

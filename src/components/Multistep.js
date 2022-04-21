@@ -8,7 +8,7 @@ export class Multistep extends Component {
     render() {
       var stepPercentage = 0;
          
-    if (this.props.currentStep === 1) {
+    if (this.props.currentStep === 1 ) {
         stepPercentage = 15;
       } else if (this.props.currentStep === 2) {
         stepPercentage = 50;

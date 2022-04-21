@@ -1,43 +1,47 @@
 .cardRadio {
+  min-width: 180px;
+  max-width: 180px;
+  border: 1px solid #dddaed;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  p {
+    color: #94999f;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .workspace-type {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+  @media screen and (max-width: 480px) {
+    height: 163px;
     min-width: 150px;
     max-width: 150px;
-    border:1px solid #dddaed;
-    padding:20px;
-    border-radius:4px;
-    img {
-        width: 20px;
-    }
-    p {
-        color:#94999f;
-        &:last-child{
-            margin-bottom: 0;
-        }
-    }
-    .workspace-type {
-        font-weight: 800;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: #555962;
-    }
-    @media screen and (max-width:480px) {
-        height: 163px;
-    }
+  }
 }
 .workspace-selector {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .form-check-input {
-    display: none;
+  display: none;
 }
 .form-check-input:checked + .cardRadio {
-    border:1px solid #664DE5;
-        img {
-            fill:red
-        }
+  border: 1px solid #664de5;
 }
-    .form-check:first-child {
-        padding-left: 0;
-    }
+.form-cheack-input:checked + .cardRadio.user {
+  fill: #664de5;
+}
+.form-check:first-child {
+  padding-left: 0;
+}
 
+.user {
+  width: 20px;
+}
